@@ -32,3 +32,9 @@ legend {
 .btn-primary {
     width: 100%;
 }
+
+.info {
+    font-size: 12px;
+    color: #ADB9CC;
+    margin: 8px 0;
+}
