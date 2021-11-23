@@ -11,9 +11,26 @@ body {
     overflow-x: hidden;
 }
 
+a.active, a:hover {
+    transition: .9s;
+}
+
+.toggle, .close {
+    font-size: 25px;
+    color: #fff;
+    padding: 0 10px;
+    height: 80px;
+    line-height: 80px;
+}
+
 .container {
     position: relative;
     width: 100%;
+}
+
+.toogle-nav {
+    display: none;
+
 }
 
 .navigation {
@@ -21,8 +38,9 @@ body {
     width: 300px;
     height: 100%;
     background-color: #003147;
-    transition: 0.5s;
+    transition: all .5s;
     overflow: hidden;
+
 }
 
 .navigation ul {
@@ -42,10 +60,64 @@ body {
     background-color: #03a9f4;
 }
 
+.navigation ul li:nth-child(1) {
+    margin-top: 30px 0;
+}
+
 .navigation ul li:nth-child(1):hover {
     background: transparent;
 }
 
 .navigation ul li:hover {
     background-color: #03a9f4;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: none;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+
+.navigation ul li a .icon .fa {
+    color: fff;
+    font-size: 24px;
+}
+
+.navigation ul li a .title,
+.navigation ul li a .title-logo {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 80px;
+    line-height: 80px;
+    white-space: nowrap;
+}
+
+
+
+@media(max-width:1050px) {
+    .toogle-nav {
+        display: block;
+        justify-content: space-around;
+        position: fixed;
+        width: 100%;
+        background-color: #003147;
+    }
+    .navigation{
+        display: none;
+    }
+
 }
