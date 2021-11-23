@@ -13,15 +13,10 @@
 </head>
 
 <body>
-  <!--toggle-->
-  <!-- <div class="toogle-nav">
-          <div class="toggle">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-          </div>
-        </div> -->
+  <!-- desktop -->
   <div class="container">
     <div class="navigation">
-      <ul>
+      <ul class="desktop-menu">
         <li>
           <a href="#">
             <span class="icon">
@@ -74,21 +69,35 @@
     </div>
     </ul>
   </div>
+  </div>
 
-  <div class="main">
-    <div class="topbar">
-      <div class="toggle"></div>
-      <div class="serach">
-        <label>
-          <input type="text" placeholder="Search here">
-        </label>
-      </div>
+  <!-- mobile -->
+  <ul class="mobile-menu">
+
+    <div class="m-icon">
+      <li><span class="m-toogle"><i class="fa fa-bars" aria-hidden="true"></i></span></li>
+      <li><span class="m-close"><i class="fa fa-times" aria-hidden="true"></i></span></li>
     </div>
-  </div>
-  </div>
+
+    <div class="m-menu">
+      <li><a href=""><span class="m-title">Home</span></a></li>
+      <li><a href=""><span class="m-title">Customrers</span></a></li>
+      <li><a href=""><span class="m-title">Workers</span></a></li>
+      <li><a href=""><span class="m-title">Products</span></a></li>
+      <li><a href=""><span class="m-title">Sign Out</span></a></li>
+    </div>
+  </ul>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+  $('.m-toogle').on('click', function () {
+    $('.m-menu').show();
+  })
+  $('.m-close').on('click', function () {
+    $('.m-menu').hide();
+  })
+</script>
 
 </html>
