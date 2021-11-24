@@ -50,7 +50,16 @@ div .submit-btn {
 
 div .submit-btn button {
     margin: auto;
+
+    height: 2.5rem;
+    width: 4.7rem;
+    font-size: 1.2rem;
+    background-color: #00A2FF;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
+
 
 @media(max-width:768px) {
     .customer-container {
