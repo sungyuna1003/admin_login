@@ -11,8 +11,8 @@ body {
     justify-content: center;
     align-items: center;
     font-family: poppins;
-    background: rgb(84, 92, 161);
-    background: linear-gradient(50deg, rgba(84, 92, 161, 1) 29%, rgba(127, 146, 179, 1) 57%, rgba(173, 203, 199, 1) 78%);
+    background: rgb(209, 211, 188);
+    background: linear-gradient(50deg, rgba(209, 211, 188, 1) 7%, rgba(148, 199, 179, 1) 28%, rgba(224, 233, 204, 1) 60%, rgba(0, 49, 71, 1) 100%);
 }
 
 .container {
