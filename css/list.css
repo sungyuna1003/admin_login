@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cart-background {
+    width: 100%;
+    background-color: peachpuff;
+    padding: 30px;
+
+}
+
+table {
+    width: 100%;
+    /* border: 1px solid #444444; */
+}
+
+th, td {
+    /* border: 1px solid #444444; */
+}
+
+.cart-table {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    background-color: #FFF7D6;
+    border-radius: 10px;
+}
+
+.cart-table thead th {
+    height: 3.2rem;
+    border-bottom: 2px solid peachpuff;
+}
+
+
+.cart-table .cart-tr {
+    height: 2.7rem;
+    margin: auto;
+    width: 100%;
+
+}
+
+.cart-table button {
+    height: 2rem;
+    width: 4rem;
+    font-size: 1.2rem;
+    background-color: #EA9A27;
+    border: none;
+    border-radius: 6px;
+}
