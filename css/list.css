@@ -1,31 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.list-mobile{
+    display: none;
+}
+th {
+    font-size: 1.06rem;
+}
+
+td {
+    font-size: 0.9rem;
 }
 
 .cart-background {
-    width: 100%;
     background-color: peachpuff;
     padding: 30px;
+    height: 100vh;
+}
+
+.cart-background {
+    text-align: center;
 
 }
 
-table {
-    width: 100%;
-    /* border: 1px solid #444444; */
-}
-
-th, td {
-    /* border: 1px solid #444444; */
-}
 
 .cart-table {
     width: 100%;
-    max-width: 700px;
+    max-width: 800px;
     margin: auto;
     background-color: #FFF7D6;
     border-radius: 10px;
+    text-align: center;
 }
 
 .cart-table thead th {
@@ -39,4 +49,31 @@ th, td {
     margin: auto;
     width: 100%;
 
+}
+
+@media(max-width:768px) {
+    .list-mobile {
+        display: block;
+    }
+
+    .list-desktop {
+        display: none;
+    }
+
+    .cart-table {
+        width: 100%;
+        max-width: 30rem;
+    }
+
+    .list-mobile th {
+        font-size: 1.2rem;
+    }
+
+    .list-mobile td {
+        font-size: 0.9rem;
+    }
+
+    .list-mobile button{
+        width: 4.3rem;
+    }
 }

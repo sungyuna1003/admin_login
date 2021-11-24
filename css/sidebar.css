@@ -11,6 +11,14 @@ body {
     overflow-x: hidden;
 }
 
+ul {
+    padding: 0px;
+}
+
+h2 {
+    line-height: 80px;
+}
+
 a.active, a:hover {
     transition: .9s;
 }
