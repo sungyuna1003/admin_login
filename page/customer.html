@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/customer.css" />
     <link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 
 <body>
+    <!-- desktop -->
     <div class="side-container">
         <div class="navigation">
             <ul class="desktop-menu">
@@ -29,7 +32,7 @@
                         <span class="icon">
                             <i class="fa fa-home" aria-hidden="true"></i>
                         </span>
-                        <span class="title">Home</span>
+                        <span class="title">Customrers List</span>
                     </a>
                 </li>
                 <li>
@@ -37,25 +40,25 @@
                         <span class="icon">
                             <i class="fa fa-user-circle" aria-hidden="true"></i>
                         </span>
-                        <span class="title">Customrers</span>
+                        <span class="title">Add Customrers</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <i class="fa fa-users" aria-hidden="true"></i>
-                        </span>
-                        <span class="title">Workers</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        </span>
-                        <span class="title">Products</span>
-                    </a>
-                </li>
+                <!-- <li>
+          <a href="#">
+            <span class="icon">
+              <i class="fa fa-users" aria-hidden="true"></i>
+            </span>
+            <span class="title">Workers</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </span>
+            <span class="title">Products</span>
+          </a>
+        </li> -->
                 <li>
                     <a href="#">
                         <span class="icon">
@@ -69,6 +72,23 @@
     </div>
 
     </div>
+
+    <!-- mobile -->
+    <ul class="mobile-menu">
+
+        <div class="m-icon">
+            <li><span class="m-toogle"><i class="fa fa-bars" aria-hidden="true"></i></span></li>
+            <li><span class="m-close"><i class="fa fa-times" aria-hidden="true"></i></span></li>
+        </div>
+
+        <div class="m-menu">
+            <li><a href=""><span class="m-title">Customrers List</span></a></li>
+            <li><a href=""><span class="m-title"> Add Customrers</span></a></li>
+            <!-- <li><a href=""><span class="m-title">Workers</span></a></li>
+      <li><a href=""><span class="m-title">Products</span></a></li> -->
+            <li><a href=""><span class="m-title">Sign Out</span></a></li>
+        </div>
+    </ul>
 
 
     <div class="customer-container">
@@ -102,6 +122,8 @@
                 <div><label>end date</label></div>
                 <input list="start-date" type="date">
                 <!-- <button type="submit" id="submit-btn">submit</button> -->
+                <div class="submit-btn"><button type="submit">submit</button></div>
+
             </fieldset>
         </form>
     </div>
