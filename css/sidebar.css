@@ -23,7 +23,7 @@ a.active, a:hover {
     line-height: 80px;
 }
 
-.container {
+.side-container {
     position: relative;
     width: 100%;
 }
@@ -140,6 +140,7 @@ a.active, a:hover {
         color: #fff;
         padding: 0 10px;
     }
+
     .m-menu {
         padding-top: 80px;
         background-color: #003147;

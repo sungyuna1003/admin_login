@@ -5,37 +5,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/customer.css" />
+    <link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
+
     <title>Document</title>
 </head>
 
 <body>
-    <form>
-        <fieldset>
-            <legend>Customrers</legend>
-            <div>
-                <div><label>Name</label></div>
-                <input type="text">
-            </div>
-            <div><label>Center</label></div>
-            <input list="center-list" type="text">
-            <datalist id="center-list">
-                <option value="Schwabing-Freimann">
-                <option value="Sendling-Westpark">
-                <option value="Neuperlach">
-            </datalist>
-            <input type="submit">
-            <br>
-            <div><label>Payment</label></div>
-            <input list="payment-list" type="text">
-            <datalist id="payment-list">
-                <option value="Cash">
-                <option value="Credit cards">
-                <option value="Mobile payments">
-                <option value="Electronic bank transfers">
-            </datalist>
-            <input type="submit">
-        </fieldset>
-    </form>
+    <div class="side-container">
+        <div class="navigation">
+            <ul class="desktop-menu">
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa fa-apple" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">
+                            <h2>Fitness Studio</h2>
+                        </span>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">Customrers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">Workers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+        </div>
+        </ul>
+    </div>
+
+    </div>
+
+
+    <div class="customer-container">
+        <form>
+            <fieldset>
+                <legend>Customrers</legend>
+                <div>
+                    <div><label>Name</label></div>
+                    <input type="text">
+                </div>
+                <div><label>Center</label></div>
+                <input list="center-list" type="text" placeholder="Sendling-Westpark">
+                <datalist id="center-list">
+                    <option value="Schwabing-Freimann">
+                    <option value="Sendling-Westpark">
+                    <option value="Neuperlach">
+                </datalist>
+                <!-- <button type="submit" id="submit-btn">submit</button> -->
+                <div><label>Payment</label></div>
+                <input list="payment-list" type="text" placeholder="Cash">
+                <datalist id="payment-list">
+                    <option value="Cash">
+                    <option value="Credit cards">
+                    <option value="Mobile payments">
+                    <option value="Electronic bank transfers">
+                </datalist>
+                <!-- <button type="submit" id="submit-btn">submit</button> -->
+                <div><label>start date</label></div>
+                <input list="start-date" type="date">
+                <!-- <button type="submit" id="submit-btn">submit</button> -->
+                <div><label>end date</label></div>
+                <input list="start-date" type="date">
+                <!-- <button type="submit" id="submit-btn">submit</button> -->
+            </fieldset>
+        </form>
+    </div>
 
 
 
