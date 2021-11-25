@@ -1,10 +1,23 @@
+// Imports
 const express = require('express');
 const app = express();
+const port = 3030
 
-app.listen(3030, function () {
+// Static files
+app.use(express.static('public'))
+app.use('/css', express(__dirname + 'public/css'))
+
+app.listen(port, function () {
     console.log('server is running');
 });
 
-app.get('/test', function (req,res) {
-    res.send('test 페이지입니다');
-})
+
+app.get('/login', function (req, res) {
+    res.sendFile(__dirname + '/views/login.html')
+});
+app.get('/list', function (req, res) {
+    res.sendFile(__dirname + '/views/list.html')
+});
+app.get('/customer', function (req, res) {
+    res.sendFile(__dirname + '/views/customer.html')
+});
