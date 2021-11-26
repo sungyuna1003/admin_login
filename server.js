@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const port = 3030
 app.use(express.urlencoded({ extended: false }));
+app.set('view engine', 'ejs');
 
 var db;
 
@@ -53,8 +54,8 @@ app.post('/add', function (req, res) {
     res.send('sent!~');
     console.log(req.body.name);
     console.log(req.body.center);
-    db.collection('customer').inserOne(
-        { name: req.body.title, center: req.body.center, payment: req.body.payment, startdate: req.body.startdate, enddate: req.body.enddate},
+    db.collection('customer').insertAll(
+        { name: req.body.name, center: req.body.center, payment: req.body.payment, startdate: req.body.startdate, enddate: req.body.enddate},
         function (req, res) {
         console.log('saved!');
     })
