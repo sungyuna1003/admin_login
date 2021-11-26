@@ -49,18 +49,21 @@ app.get('/login', function (req, res) {
     res.sendFile(__dirname + '/views/login.html')
 });
 
-
+// customer add
 app.post('/add', function (req, res) {
     res.send('sent!~');
-    console.log(req.body.name);
-    console.log(req.body.center);
-    console.log(req.body.center);
 
     db.collection('customer').insertMany(
         [{ name: req.body.name, center: req.body.center, payment: req.body.payment, startdate: req.body.startdate, enddate: req.body.enddate}],
         function (req, res) {
         console.log('saved!');
         })
-    
-    
 })
+// show customer list(not yet)
+
+app.get('/list', function (req,res) {
+    res.send('show-list');
+
+    db.collection('customer').find()
+})
+
