@@ -11,13 +11,15 @@ app.listen(port, function () {
     console.log('server is running');
 });
 
-
-app.get('/login', function (req, res) {
-    res.sendFile(__dirname + '/views/login.html')
-});
 app.get('/list', function (req, res) {
     res.sendFile(__dirname + '/views/list.html')
 });
+
+
 app.get('/customer', function (req, res) {
     res.sendFile(__dirname + '/views/customer.html')
+});
+
+app.get('/login', function (req, res) {
+    res.sendFile(__dirname + '/views/login.html')
 });
