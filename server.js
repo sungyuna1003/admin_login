@@ -4,6 +4,7 @@ const app = express();
 const port = 3030
 app.use(express.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
+app.engine("html", require("ejs").renderFile);
 
 var db;
 
@@ -14,11 +15,11 @@ MongoClient.connect('mongodb+srv://admin:1234@admin.v8pd6.mongodb.net/centeradmi
     
     db = client.db('centeradmin');
 
-    db.collection('customer').insertOne(
-        { _id : 1 , name: 'Yuna', center: 'Neuperlach', payment: 'cash', startdate: '2021 - 10 - 02', enddate: '2021 - 11 - 02' },
-        function (error, result) {
-        console.log('input-clear!')
-    });
+    // db.collection('customer').insertOne(
+    //     { _id : 1 , name: 'Yuna', center: 'Neuperlach', payment: 'cash', startdate: '2021 - 10 - 02', enddate: '2021 - 11 - 02' },
+    //     function (error, result) {
+    //     console.log('input-clear!')
+    // });
 
     app.listen(port, function () {
         console.log('server is running!');
