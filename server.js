@@ -33,21 +33,21 @@ app.use(express.static('public'))
 app.use('/css', express(__dirname + 'public/css'))
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/views/login.html')
+    res.sendFile(__dirname + '/views/login.ejs')
 });
 
 
 app.get('/list', function (req, res) {
-    res.sendFile(__dirname + '/views/list.html')
+    res.sendFile(__dirname + '/views/list.ejs')
 });
 
 
 app.get('/customer', function (req, res) {
-    res.sendFile(__dirname + '/views/customer.html')
+    res.sendFile(__dirname + '/views/customer.ejs')
 });
 
 app.get('/login', function (req, res) {
-    res.sendFile(__dirname + '/views/login.html')
+    res.sendFile(__dirname + '/views/login.ejs')
 });
 
 // customer add
@@ -62,9 +62,9 @@ app.post('/add', function (req, res) {
 })
 // show customer list(not yet)
 
-app.get('/list', function (req,res) {
-    res.send('show-list');
+// app.get('/list', function (req,res) {
+//     res.send('show-list');
 
-    db.collection('customer').find()
-})
+//     db.collection('customer').find()
+// })
 
