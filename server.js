@@ -17,7 +17,7 @@ MongoClient.connect('mongodb+srv://admin:1234@admin.v8pd6.mongodb.net/centeradmi
     db.collection('customer').insertOne(
         { _id : 1 , name: 'Yuna', center: 'Neuperlach', payment: 'cash', startdate: '2021 - 10 - 02', enddate: '2021 - 11 - 02' },
         function (error, result) {
-        console.log('clear!')
+        console.log('input-clear!')
     });
 
     app.listen(port, function () {
@@ -54,9 +54,13 @@ app.post('/add', function (req, res) {
     res.send('sent!~');
     console.log(req.body.name);
     console.log(req.body.center);
-    db.collection('customer').insertAll(
-        { name: req.body.name, center: req.body.center, payment: req.body.payment, startdate: req.body.startdate, enddate: req.body.enddate},
+    console.log(req.body.center);
+
+    db.collection('customer').insertMany(
+        [{ name: req.body.name, center: req.body.center, payment: req.body.payment, startdate: req.body.startdate, enddate: req.body.enddate}],
         function (req, res) {
         console.log('saved!');
-    })
+        })
+    
+    
 })
