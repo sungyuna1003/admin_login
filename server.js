@@ -54,7 +54,9 @@ app.get('/login', function (req, res) {
 
 // customer add
 app.post('/add', function (req, res) {
-    res.send('sent!~');
+    // res.send('sent!~');
+    
+    res.render('list.ejs')
 
     db.collection('customer').insertMany(
         [{ name: req.body.name, center: req.body.center, payment: req.body.payment, startdate: req.body.startdate, enddate: req.body.enddate}],
