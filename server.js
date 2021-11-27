@@ -3,8 +3,10 @@ const express = require('express');
 const app = express();
 const port = 3030
 app.use(express.urlencoded({ extended: false }));
+
 app.set('view engine', 'ejs');
 app.engine("html", require("ejs").renderFile);
+
 
 var db;
 
@@ -33,21 +35,21 @@ app.use(express.static('public'))
 app.use('/css', express(__dirname + 'public/css'))
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/views/login.ejs')
+    res.render('login.ejs')
 });
 
 
 app.get('/list', function (req, res) {
-    res.sendFile(__dirname + '/views/list.ejs')
+    res.render('list.ejs')
 });
 
 
 app.get('/customer', function (req, res) {
-    res.sendFile(__dirname + '/views/customer.ejs')
+    res.render('customer.ejs')
 });
 
 app.get('/login', function (req, res) {
-    res.sendFile(__dirname + '/views/login.ejs')
+    res.render('login.ejs')
 });
 
 // customer add
