@@ -6,9 +6,11 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-.list-mobile{
+
+.list-mobile {
     display: none;
 }
+
 th {
     font-size: 1.06rem;
 }
@@ -21,11 +23,11 @@ td {
     background-color: peachpuff;
     padding: 30px;
     height: 100vh;
+
 }
 
 .cart-background {
     text-align: center;
-
 }
 
 
@@ -36,6 +38,10 @@ td {
     background-color: #FFF7D6;
     border-radius: 10px;
     text-align: center;
+    position: relative;
+    left: 5rem;
+    border: 1px solid red;
+
 }
 
 .cart-table thead th {
@@ -48,7 +54,6 @@ td {
     height: 2.7rem;
     margin: auto;
     width: 100%;
-
 }
 
 @media(max-width:768px) {
@@ -60,20 +65,20 @@ td {
         display: none;
     }
 
-    .cart-table {
+    .mobile-cart-table {
         width: 100%;
-        max-width: 30rem;
+        max-width: 15rem;
     }
 
     .list-mobile th {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .list-mobile td {
         font-size: 0.9rem;
     }
 
-    .list-mobile button{
-        width: 4.3rem;
+    .list-mobile button {
+        width: 3.2rem;
     }
 }

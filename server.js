@@ -41,6 +41,7 @@ app.get('/', function (req, res) {
 
 app.get('/list', function (req, res) {
     res.render('list.ejs')
+
 });
 
 
@@ -54,8 +55,6 @@ app.get('/login', function (req, res) {
 
 // customer add
 app.post('/add', function (req, res) {
-    // res.send('sent!~');
-    // res.render('list.ejs')
     res.send("<script>alert('saved');location.href='list'</script>")
     db.collection('customer').insertMany(
         [{ name: req.body.name, center: req.body.center, payment: req.body.payment, startdate: req.body.startdate, enddate: req.body.enddate}],
@@ -65,9 +64,18 @@ app.post('/add', function (req, res) {
 })
 // show customer list(not yet)
 
-// app.get('/list', function (req,res) {
-//     res.send('show-list');
+// app.get('/list', function (req, res) {
+//     res.send('list?!~');
 
-//     db.collection('customer').find()
+//     db.collection('customer').find().toArray(function (error, result) {
+//         console.log(result)
+//         res.render('list.ejs')
+//     })
 // })
 
+app.get('/list', function (error, client) {
+    if (error) return console.log(error)
+
+    res.send('list?!~');
+
+});
