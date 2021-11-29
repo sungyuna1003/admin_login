@@ -67,19 +67,16 @@ app.post("/add", function (req, res) {
     }
   );
 });
-// show customer list(not yet)
 
-// app.get('/list', function (req, res) {
-//     res.send('list?!~');
 
-//     db.collection('customer').find().toArray(function (error, result) {
-//         console.log(result)
-//         res.render('list.ejs')
-//     })
-// })
+// 문제 해결중
 
-app.get("/list", function (error, client) {
-  if (error) return console.log(error);
+app.get('/list', function (req, res) {
+    res.send('list?!~');
 
-  res.send("list?!~");
-});
+    db.collection('customer').find().toArray(function (error, result) {
+        console.log(result)
+        res.render('list.ejs')
+    })
+})
+
