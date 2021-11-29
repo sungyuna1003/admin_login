@@ -96,16 +96,16 @@ app.post("/add", function (req, res) {
 
 // customer add
 app.post("/test1", function (req, res) {
-  res.send("clear");
-  // db.collection("test1").insertMany(
-  //   [
-  //     {
-  //       name: req.body.name,
-  //       center: req.body.color,
-  //     },
-  //   ],
-  //   function (req, res) {
-  //     console.log("test saved!");
-  //   }
-  // );
+  res.send("<script>alert('good');location.href='test2'</script>");
+  db.collection("test1").insertMany(
+    [
+      {
+        name: req.body.name,
+        center: req.body.color,
+      },
+    ],
+    function (req, res) {
+      console.log("test saved!");
+    }
+  );
 });
