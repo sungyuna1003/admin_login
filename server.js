@@ -94,7 +94,7 @@ app.post("/add", function (req, res) {
 // });
 // });
 
-// customer add
+// test1 add
 app.post("/test1", function (req, res) {
   res.send("<script>alert('good');location.href='test2'</script>");
   db.collection("test1").insertMany(
@@ -108,4 +108,12 @@ app.post("/test1", function (req, res) {
       console.log("test saved!");
     }
   );
+});
+//test get
+app.get("/test2", function (req, res) {
+  db.collection("test1")
+    .find()
+    .toArray(function (error, result) {
+      console.log(result);
+    });
 });
