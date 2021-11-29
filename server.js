@@ -101,7 +101,7 @@ app.post("/test1", function (req, res) {
     [
       {
         name: req.body.name,
-        center: req.body.color,
+        color: req.body.color,
       },
     ],
     function (req, res) {
@@ -115,5 +115,7 @@ app.get("/test2", function (req, res) {
     .find()
     .toArray(function (error, result) {
       console.log(result);
+      // 꾸며진 html 보여줌(밑에부분 다시보기)
+      res.render("test2.ejs", { posts: result });
     });
 });
