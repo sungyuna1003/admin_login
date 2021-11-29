@@ -48,10 +48,12 @@ app.get("/customer", function (req, res) {
 app.get("/login", function (req, res) {
   res.render("login.ejs");
 });
-app.get("/test", function (req, res) {
-  res.render("test.ejs");
+app.get("/test1", function (req, res) {
+  res.render("test1.ejs");
 });
-
+app.get("/test2", function (req, res) {
+  res.render("test2.ejs");
+});
 // customer add
 app.post("/add", function (req, res) {
   res.send("<script>alert('saved');location.href='list'</script>");
@@ -83,11 +85,27 @@ app.post("/add", function (req, res) {
 // });
 
 // 테스트용
-app.get("/list", function (req, res) {
-  db.getCollection("customer").find({ name: "test3" });
-  console.log(res);
-  // .toArray(function (error, result) {
-  //   if (err) throw error;
-  //   console.log(result);
-  // });
+// app.get("/list", function (req, res) {
+//   db.getCollection("customer").find({ name: "test3" });
+//   console.log(res);
+// .toArray(function (error, result) {
+//   if (err) throw error;
+//   console.log(result);
+// });
+// });
+
+// customer add
+app.post("/test1", function (req, res) {
+  res.send("clear");
+  // db.collection("test1").insertMany(
+  //   [
+  //     {
+  //       name: req.body.name,
+  //       center: req.body.color,
+  //     },
+  //   ],
+  //   function (req, res) {
+  //     console.log("test saved!");
+  //   }
+  // );
 });
