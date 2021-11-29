@@ -48,6 +48,9 @@ app.get("/customer", function (req, res) {
 app.get("/login", function (req, res) {
   res.render("login.ejs");
 });
+app.get("/test", function (req, res) {
+  res.render("test.ejs");
+});
 
 // customer add
 app.post("/add", function (req, res) {
@@ -68,15 +71,23 @@ app.post("/add", function (req, res) {
   );
 });
 
-
 // 문제 해결중
 
-app.get('/list', function (req, res) {
-    res.send('list?!~');
+// app.get("/list", function (req, res) {
+//   res.send("list?!~");
+//   db.collection("customer")
+//     .find()
+//     .toArray(function (error, result) {
+//       console.log(result);
+//     });
+// });
 
-    db.collection('customer').find().toArray(function (error, result) {
-        console.log(result)
-        res.render('list.ejs')
-    })
-})
-
+// 테스트용
+app.get("/list", function (req, res) {
+  db.getCollection("customer").find({ name: "test3" });
+  console.log(res);
+  // .toArray(function (error, result) {
+  //   if (err) throw error;
+  //   console.log(result);
+  // });
+});
