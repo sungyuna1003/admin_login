@@ -1,84 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 .list-mobile {
-    display: none;
+  display: none;
 }
 
 th {
-    font-size: 1.06rem;
+  font-size: 1.06rem;
 }
 
 td {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .cart-background {
-    background-color: peachpuff;
-    padding: 30px;
-    height: 100vh;
-
+  background-color: peachpuff;
+  padding: 30px;
+  height: 100vh;
 }
 
 .cart-background {
-    text-align: center;
+  text-align: center;
 }
-
 
 .cart-table {
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    background-color: #FFF7D6;
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-    left: 5rem;
-    border: 1px solid red;
-
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  background-color: #fff7d6;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  left: 5rem;
+  border: 1px solid red;
 }
 
 .cart-table thead th {
-    height: 3.2rem;
-    border-bottom: 2px solid peachpuff;
+  height: 3.2rem;
+  border-bottom: 2px solid peachpuff;
 }
-
 
 .cart-table .cart-tr {
-    height: 2.7rem;
-    margin: auto;
-    width: 100%;
+  height: 2.7rem;
+  margin: auto;
+  width: 100%;
 }
 
-@media(max-width:768px) {
-    .list-mobile {
-        display: block;
-    }
+@media (max-width: 768px) {
+  .list-mobile {
+    display: block;
+  }
 
-    .list-desktop {
-        display: none;
-    }
+  .list-desktop {
+    display: none;
+  }
 
-    .mobile-cart-table {
-        width: 100%;
-        max-width: 15rem;
-    }
+  .mobile-cart-table {
+    width: 100%;
+    max-width: 15rem;
+  }
 
-    .list-mobile th {
-        font-size: 1.3rem;
-    }
+  .list-mobile th {
+    font-size: 1.3rem;
+  }
 
-    .list-mobile td {
-        font-size: 0.9rem;
-    }
+  .list-mobile td {
+    font-size: 0.9rem;
+  }
 
-    .list-mobile button {
-        width: 3.2rem;
-    }
+  .list-mobile button {
+    width: 3.2rem;
+  }
 }

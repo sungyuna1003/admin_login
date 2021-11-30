@@ -17,117 +17,61 @@
 </head>
 
 <body>
-    <!-- desktop -->
-    <div class="side-container">
-        <div class="navigation">
-            <ul class="desktop-menu">
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <i class="fa fa-apple" aria-hidden="true"></i>
-                        </span>
-                        <span class="title">
-                            <h2>Fitness Studio</h2>
-                        </span>
-                </li>
-                <li>
-                    <a href="list" class="active">
-                        <span class="icon">
-                            <i class="fa fa-home" aria-hidden="true"></i>
-                        </span>
-                        <span class="title">Customrers List</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="customer">
-                        <span class="icon">
-                            <i class="fa fa-user-circle" aria-hidden="true"></i>
-                        </span>
-                        <span class="title">Add Customrers</span>
-                    </a>
-                </li>
-                <!-- <li>
-              <a href="#">
-                <span class="icon">
-                  <i class="fa fa-users" aria-hidden="true"></i>
-                </span>
-                <span class="title">Workers</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span class="icon">
-                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                </span>
-                <span class="title">Products</span>
-              </a>
-            </li> -->
-                <li>
-                    <a href="login.html">
-                        <span class="icon">
-                            <i class="fa fa-sign-out" aria-hidden="true"></i>
-                        </span>
-                        <span class="title">Sign Out</span>
-                    </a>
-                </li>
-        </div>
-        </ul>
-    </div>
+    <%- include('sidebar.html') %>
 
-    </div>
-    <div class="list-desktop">
-        <div class="cart-background">
-            <h3>Customrers List</h3>
-            <table class="cart-table">
-                <thead>
-                    <th>No</th>
-                    <th>Name</th>
-                    <th>Center</th>
-                    <th>Payment</th>
-                    <th>start date</th>
-                    <th>end date</th>
-                    <th>edit/delete</th>
-                </thead>
-                <tbody>
-                    <tr class="cart-tr">
-                        <td>번호</td>
-                        <td>이름</td>
-                        <td>센터</td>
-                        <td>지불</td>
-                        <td>시작 날짜</td>
-                        <td>끝나는 날짜</td>
-                        <td>
-                            <button type="button" class="btn btn-primary">edit</button>
-                            <button type="button" class="btn btn-danger">delete</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="list-desktop">
+            <div class="cart-background">
+                <h3>Customrers List</h3>
+                <table class="cart-table">
+                    <thead>
+                        <th>No</th>
+                        <th>Name</th>
+                        <th>Center</th>
+                        <th>Payment</th>
+                        <th>start date</th>
+                        <th>end date</th>
+                        <th>edit/delete</th>
+                    </thead>
+                    <tbody>
+                        <tr class="cart-tr">
+                            <td>번호</td>
+                            <td>이름</td>
+                            <td>센터</td>
+                            <td>지불</td>
+                            <td>시작 날짜</td>
+                            <td>끝나는 날짜</td>
+                            <td>
+                                <button type="button" class="btn btn-primary">edit</button>
+                                <button type="button" class="btn btn-danger">delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
 
-    <div class="list-mobile">
-        <div class="cart-background">
-            <h3>Customrers List</h3>
-            <table class="mobile-cart-table">
-                <thead>
-                    <th>Name</th>
-                    <th>Center</th>
-                    <th>edit/delete</th>
-                </thead>
-                <tbody>
-                    <tr class="cart-tr">
-                        <td>이름</td>
-                        <td>센터</td>
-                        <td>
-                            <button type="button" class="btn btn-primary">edit</button>
-                            <button type="button" class="btn btn-danger">delete</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="list-mobile">
+            <div class="cart-background">
+                <h3>Customrers List</h3>
+                <table class="mobile-cart-table">
+                    <thead>
+                        <th>Name</th>
+                        <th>Center</th>
+                        <th>edit/delete</th>
+                    </thead>
+                    <tbody>
+                        <tr class="cart-tr">
+                            <td>이름</td>
+                            <td>센터</td>
+                            <td>
+                                <button type="button" class="btn btn-primary">edit</button>
+                                <button type="button" class="btn btn-danger">delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
 
 </body>
 
