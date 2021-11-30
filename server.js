@@ -54,6 +54,9 @@ app.get("/test1", function (req, res) {
 app.get("/test2", function (req, res) {
   res.render("test2.ejs");
 });
+app.get("/test3", function (req, res) {
+  res.render("test3.ejs");
+});
 // customer add
 app.post("/add", function (req, res) {
   res.send("<script>alert('saved');location.href='list'</script>");
@@ -84,16 +87,6 @@ app.post("/add", function (req, res) {
 //     });
 // });
 
-// 테스트용
-// app.get("/list", function (req, res) {
-//   db.getCollection("customer").find({ name: "test3" });
-//   console.log(res);
-// .toArray(function (error, result) {
-//   if (err) throw error;
-//   console.log(result);
-// });
-// });
-
 // test1 add
 app.post("/test1", function (req, res) {
   res.send("<script>alert('good');location.href='test2'</script>");
@@ -109,13 +102,23 @@ app.post("/test1", function (req, res) {
     }
   );
 });
-//test get
+
+//test1 get(doesn't work)
+app.post("/test3", function (req, res) {
+  res.send("<script>alert('good');location.href='test2'</script>");
+  db.collection("test3").insertMany([
+    {
+      name: req.body.name,
+      job: req.body.job,
+    },
+  ]);
+});
+
 app.get("/test2", function (req, res) {
-  db.collection("test1")
+  db.collection("test3")
     .find()
     .toArray(function (error, result) {
       console.log(result);
-      // 꾸며진 html 보여줌(밑에부분 다시보기)
-      res.render("test2.ejs", { posts: result });
     });
+  res.render("test3.ejs");
 });
