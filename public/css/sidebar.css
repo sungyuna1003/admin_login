@@ -18,6 +18,8 @@ ul {
 
 h2 {
   line-height: 80px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 a.active,
@@ -117,7 +119,7 @@ a:hover {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .desktop-menu {
     display: none;
   }

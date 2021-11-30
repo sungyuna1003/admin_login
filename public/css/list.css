@@ -55,26 +55,34 @@ td {
 @media (max-width: 768px) {
   .list-mobile {
     display: block;
+    width: 100vw;
+    background-color: peachpuff;
+    height: 100vh;
   }
 
   .list-desktop {
     display: none;
   }
 
-  .mobile-cart-table {
-    width: 100%;
-    max-width: 15rem;
+  .mobile-cart-background {
+    background-color: peachpuff;
+    align-items: center;
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 1em;
   }
-
+  .mobile-cart-background h3 {
+    margin-top: 5rem;
+  }
+  .mobile-cart-table {
+    border: 1px solid orange;
+    width: 100%;
+  }
   .list-mobile th {
     font-size: 1.3rem;
   }
 
   .list-mobile td {
     font-size: 0.9rem;
-  }
-
-  .list-mobile button {
-    width: 3.2rem;
   }
 }

@@ -36,8 +36,6 @@ input {
 }
 
 div #subtmit-btn {
-  /* margin: 0 auto;
-    text-align: center; */
   width: 100%;
 }
 
@@ -48,7 +46,6 @@ div .submit-btn {
 
 div .submit-btn button {
   margin: auto;
-
   height: 2.5rem;
   width: 4.7rem;
   font-size: 1.2rem;
@@ -61,15 +58,16 @@ div .submit-btn button {
 @media (max-width: 768px) {
   .customer-container {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -20%);
+    transform: translate(-50%, 20%);
     z-index: 1;
   }
 
   form {
     width: 20rem;
     font-size: 1rem;
+    border: 1px solid red;
   }
 
   input {
