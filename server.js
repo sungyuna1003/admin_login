@@ -38,25 +38,28 @@ app.get("/", function (req, res) {
 });
 
 app.get("/list", function (req, res) {
-  res.render("list.ejs");
+  db.collection("customer")
+    .find()
+    .toArray(function (error, result) {
+      console.log(result);
+      res.render("list.ejs", { customers: result });
+    });
 });
 
 app.get("/customer", function (req, res) {
+  db.collection("customer")
+    .find()
+    .toArray(function (error, result) {
+      console.log(result);
+    });
+
   res.render("customer.ejs");
 });
 
 app.get("/login", function (req, res) {
   res.render("login.ejs");
 });
-app.get("/test1", function (req, res) {
-  res.render("test1.ejs");
-});
-app.get("/test2", function (req, res) {
-  res.render("test2.ejs");
-});
-app.get("/test3", function (req, res) {
-  res.render("test3.ejs");
-});
+
 // customer add
 app.post("/add", function (req, res) {
   res.send("<script>alert('saved');location.href='list'</script>");
@@ -74,51 +77,4 @@ app.post("/add", function (req, res) {
       console.log("saved!");
     }
   );
-});
-
-// 문제 해결중
-
-// app.get("/list", function (req, res) {
-//   res.send("list?!~");
-//   db.collection("customer")
-//     .find()
-//     .toArray(function (error, result) {
-//       console.log(result);
-//     });
-// });
-
-// test1 add
-app.post("/test1", function (req, res) {
-  res.send("<script>alert('good');location.href='test2'</script>");
-  db.collection("test1").insertMany(
-    [
-      {
-        name: req.body.name,
-        color: req.body.color,
-      },
-    ],
-    function (req, res) {
-      console.log("test saved!");
-    }
-  );
-});
-
-//test1 get(doesn't work)
-app.post("/test3", function (req, res) {
-  res.send("<script>alert('good');location.href='test2'</script>");
-  db.collection("test3").insertMany([
-    {
-      name: req.body.name,
-      job: req.body.job,
-    },
-  ]);
-});
-
-app.get("/test2", function (req, res) {
-  db.collection("test3")
-    .find()
-    .toArray(function (error, result) {
-      console.log(result);
-    });
-  res.render("test3.ejs");
 });

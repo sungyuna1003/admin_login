@@ -34,17 +34,31 @@
                     </thead>
                     <tbody>
                         <tr class="cart-tr">
-                            <td>번호</td>
-                            <td>이름</td>
-                            <td>센터</td>
-                            <td>지불</td>
-                            <td>시작 날짜</td>
-                            <td>끝나는 날짜</td>
-                            <td>
-                                <button type="button" class="btn btn-primary">edit</button>
-                                <button type="button" class="btn btn-danger">delete</button>
-                            </td>
+                            <% for (var i=0 ; i < customers.length; i++) { %>
+                                <td>1</td>
+
+                                <td>
+                                    <%= customers[i].name%>
+                                </td>
+                                <td>
+                                    <%= customers[i].center%>
+                                </td>
+                                <td>
+                                    <%= customers[i].payment%>
+                                </td>
+                                <td>
+                                    <%= customers[i].startdate%>
+                                </td>
+                                <td>
+                                    <%= customers[i].enddate%>
+                                </td>
+
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm">edit</button>
+                                    <button type="button" class="btn btn-danger btn-sm">delete</button>
+                                </td>
                         </tr>
+                        <% } %>
                     </tbody>
                 </table>
             </div>
@@ -61,12 +75,18 @@
                     </thead>
                     <tbody>
                         <tr class="cart-tr">
-                            <td>이름</td>
-                            <td>센터</td>
-                            <td>
-                                <button type="button" class="btn btn-primary">edit</button>
-                                <button type="button" class="btn btn-danger">delete</button>
-                            </td>
+                            <% for (var i=0 ; i < 5; i++) { %>
+                                <td>
+                                    <%= customers[i].name%>
+                                </td>
+                                <td>
+                                    <%= customers[i].center%>
+                                </td>
+                                <% } %>
+                                    <td>
+                                        <button type="button" class="btn btn-primary">edit</button>
+                                        <button type="button" class="btn btn-danger">delete</button>
+                                    </td>
                         </tr>
                     </tbody>
                 </table>
