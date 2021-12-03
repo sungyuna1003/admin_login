@@ -66,28 +66,31 @@
 
         <div class="list-mobile">
             <div class="mobile-cart-background">
-                <h3>Customrers List</h3>
                 <table class="mobile-cart-table">
+                    <h3>Customrers List</h3>
+
                     <thead>
                         <th>Name</th>
                         <th>Center</th>
                         <th>edit/delete</th>
                     </thead>
                     <tbody>
-                        <tr class="cart-tr">
-                            <% for (var i=0 ; i < 5; i++) { %>
+                        <tr class="mobile-cart-tr">
+                            <% for (var i=0 ; i < customers.length; i++) { %>
                                 <td>
                                     <%= customers[i].name%>
                                 </td>
                                 <td>
                                     <%= customers[i].center%>
                                 </td>
-                                <% } %>
-                                    <td>
-                                        <button type="button" class="btn btn-primary">edit</button>
-                                        <button type="button" class="btn btn-danger">delete</button>
-                                    </td>
+
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-sm">edit</button>
+                                    <button type="button" class="btn btn-danger btn-sm">delete</button>
+                                </td>
+
                         </tr>
+                        <% } %>
                     </tbody>
                 </table>
             </div>
