@@ -46,13 +46,13 @@ app.get("/list", function (req, res) {
     });
 });
 
-// app.delete("/delete", function (req, res) {
-//   console.log(req.body);
-
-//   db.collection("customers").deleteOne(req.body, function (error, result) {
-//     console.log("deleted");
-//   });
-// });
+app.delete("/delete", function (req, res) {
+  console.log(req.body);
+  req.body._id = parseInt(req.body._id);
+  db.collection("customer").deleteOne(req.body, function (error, result) {
+    console.log("deleted!");
+  });
+});
 
 app.get("/customer", function (req, res) {
   db.collection("customer")
