@@ -47,10 +47,11 @@ app.get("/list", function (req, res) {
 });
 
 app.delete("/delete", function (req, res) {
-  console.log(req.body);
+  // console.log(req.body);
   req.body._id = parseInt(req.body._id);
   db.collection("customer").deleteOne(req.body, function (error, result) {
     console.log("deleted!");
+    res.status(200).send({ message: "success!" });
   });
 });
 

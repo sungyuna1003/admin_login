@@ -35,8 +35,9 @@
                         <th>edit/delete</th>
                     </thead>
                     <tbody>
-                        <tr class="cart-tr">
-                            <% for (var i=0 ; i < customers.length; i++) { %>
+
+                        <% for (var i=0 ; i < customers.length; i++) { %>
+                            <tr class="cart-tr">
                                 <td>
                                     <%= customers[i]._id %>
                                 </td>
@@ -61,8 +62,9 @@
                                     <button type="button" class="btn btn-danger btn-sm" id="delete"
                                         data-id="<%= customers[i]._id %>">delete</button>
                                 </td>
-                        </tr>
-                        <% } %>
+                                <% } %>
+                            </tr>
+
                     </tbody>
                 </table>
             </div>
@@ -81,19 +83,19 @@
                     <tbody>
                         <tr class="mobile-cart-tr">
                             <% for (var i=0 ; i < customers.length; i++) { %>
-                                <td>
-                                    <%= customers[i].name%>
-                                </td>
-                                <td>
-                                    <%= customers[i].center%>
-                                </td>
-
-                                <td>
-                                    <button type="button" class="btn btn-primary btn-sm">edit</button>
-                                    <button type="button" class="btn btn-danger btn-sm" id="delete"
-                                        data-id="<%= customers[i]._id %>">delete</button>
-                                </td>
-
+                                <div>
+                                    <td>
+                                        <%= customers[i].name%>
+                                    </td>
+                                    <td>
+                                        <%= customers[i].center%>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary btn-sm">edit</button>
+                                        <button type="button" class="btn btn-danger btn-sm" id="delete"
+                                            data-id="<%= customers[i]._id %>">delete</button>
+                                    </td>
+                                </div>
                         </tr>
                         <% } %>
                     </tbody>
@@ -104,13 +106,15 @@
         <script>
             $('#delete').click(function (e) {
                 var num = e.target.dataset.id;
-
                 $.ajax({
                     method: 'DELETE',
                     url: '/delete',
                     data: { _id: num }
                 }).done(function (result) {
-
+                    console.log('success~');
+                    location.reload();
+                }).fail(function (xhr, textStatus, errorThrown) {
+                    console.log(xhr, textStatus, errorThrown);
                 })
             })
 
