@@ -41,10 +41,18 @@ app.get("/list", function (req, res) {
   db.collection("customer")
     .find()
     .toArray(function (error, result) {
-      console.log(result);
+      // console.log(result);
       res.render("list.ejs", { customers: result });
     });
 });
+
+// app.delete("/delete", function (req, res) {
+//   console.log(req.body);
+
+//   db.collection("customers").deleteOne(req.body, function (error, result) {
+//     console.log("deleted");
+//   });
+// });
 
 app.get("/customer", function (req, res) {
   db.collection("customer")
@@ -63,18 +71,35 @@ app.get("/login", function (req, res) {
 // customer add
 app.post("/add", function (req, res) {
   res.send("<script>alert('saved');location.href='list'</script>");
-  db.collection("customer").insertMany(
-    [
-      {
-        name: req.body.name,
-        center: req.body.center,
-        payment: req.body.payment,
-        startdate: req.body.startdate,
-        enddate: req.body.enddate,
-      },
-    ],
-    function (req, res) {
-      console.log("saved!");
+  db.collection("counter").findOne(
+    { name: "게시물갯수" },
+    function (error, result) {
+      console.log(result.totalPost);
+      var total = result.totalPost;
+      db.collection("customer").insertMany(
+        [
+          {
+            _id: total + 1,
+            name: req.body.name,
+            center: req.body.center,
+            payment: req.body.payment,
+            startdate: req.body.startdate,
+            enddate: req.body.enddate,
+          },
+        ],
+        function (req, res) {
+          console.log("saved!");
+        }
+      );
+      db.collection("counter").updateOne(
+        { name: "게시물갯수" },
+        { $inc: { totalPost: 1 } },
+        function (error, result) {
+          if (error) {
+            return console.log(error);
+          }
+        }
+      );
     }
   );
 });

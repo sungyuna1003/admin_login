@@ -20,10 +20,13 @@
     <%- include('sidebar.html') %>
 
         <div class="list-desktop">
+
+
             <div class="cart-background">
                 <h3>Customrers List</h3>
                 <table class="cart-table">
                     <thead>
+                        <th>No</th>
                         <th>Name</th>
                         <th>Center</th>
                         <th>Payment</th>
@@ -34,7 +37,9 @@
                     <tbody>
                         <tr class="cart-tr">
                             <% for (var i=0 ; i < customers.length; i++) { %>
-
+                                <td>
+                                    1
+                                </td>
                                 <td>
                                     <%= customers[i].name%>
                                 </td>
@@ -93,6 +98,16 @@
                 </table>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $.ajax({
+                method: 'DELETE',
+                url: '/delete',
+                data: { name: "test1" }
+            }).dobe(function (resutl) {
+
+            })
+        </script>
 
 </body>
 
