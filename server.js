@@ -115,3 +115,21 @@ app.get("/edit/:id", function (req, res) {
     }
   );
 });
+app.put("/edit", function (req, res) {
+  db.collection("customer").updateOne(
+    { _id: parseInt(req.body.id) },
+    {
+      $set: {
+        name: req.body.name,
+        center: req.body.center,
+        payment: req.body.payment,
+        startdate: req.body.startdate,
+        enddate: req.body.enddate,
+      },
+    },
+    function (error, result) {
+      console.log("edited");
+      res.redirect("/list");
+    }
+  );
+});

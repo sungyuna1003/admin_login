@@ -67,6 +67,7 @@ tbody td {
     display: block;
     background-color: peachpuff;
     overflow: auto;
+    height: 100vh;
   }
 
   .mobile-cart-background {

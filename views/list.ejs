@@ -58,7 +58,8 @@
                                 </td>
 
                                 <td>
-                                    <button type="button" class="btn btn-primary btn-sm">edit</button>
+                                    <button type="button" class="btn btn-primary btn-sm" id="edit"
+                                        data-id="<%= customers[i]._id %>">edit</button>
                                     <button type="button" class="btn btn-danger btn-sm" id="delete"
                                         data-id="<%= customers[i]._id %>">delete</button>
                                 </td>
@@ -91,7 +92,7 @@
                                         <%= customers[i].center%>
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn-primary btn-sm">edit</button>
+                                        <button type="button" class="btn btn-primary btn-sm" id="edit">edit</button>
                                         <button type="button" class="btn btn-danger btn-sm" id="delete"
                                             data-id="<%= customers[i]._id %>">delete</button>
                                     </td>
@@ -117,7 +118,11 @@
                     console.log(xhr, textStatus, errorThrown);
                 })
             })
+            $('#edit').on('click', function () {
 
+                window.location.href = '/edit/22';
+
+            })
 
         </script>
 
