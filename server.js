@@ -4,6 +4,9 @@ const app = express();
 const port = 3030;
 app.use(express.urlencoded({ extended: false }));
 
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));
+
 app.set("view engine", "ejs");
 app.engine("html", require("ejs").renderFile);
 
