@@ -68,7 +68,6 @@ app.get("/customer", function (req, res) {
 app.get("/login", function (req, res) {
   res.render("login.ejs");
 });
-
 // customer add
 app.post("/add", function (req, res) {
   res.send("<script>alert('saved');location.href='list'</script>");
@@ -101,6 +100,15 @@ app.post("/add", function (req, res) {
           }
         }
       );
+    }
+  );
+});
+app.get("/edit/:id", function (req, res) {
+  db.collection("customer").findOne(
+    { _id: parseInt(req.params.id) },
+    function (error, result) {
+      console.log(result);
+      res.render("edit.ejs", { post: result });
     }
   );
 });
