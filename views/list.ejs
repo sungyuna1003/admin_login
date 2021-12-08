@@ -92,7 +92,8 @@
                                         <%= customers[i].center%>
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn-primary btn-sm" id="edit">edit</button>
+                                        <button type="button" class="btn btn-primary btn-sm" id="+"
+                                            data-id="<%= customers[i]._id %>">edit</button>
                                         <button type="button" class="btn btn-danger btn-sm" id="delete"
                                             data-id="<%= customers[i]._id %>">delete</button>
                                     </td>
@@ -118,11 +119,11 @@
                     console.log(xhr, textStatus, errorThrown);
                 })
             })
-            $('#edit').on('click', function () {
+            // $('#edit').click(function (e) {
+            //     var num = e.target.dataset.id;
+            //     window.location.href = '/edit/' + (num + 1);
 
-                window.location.href = '/edit/22';
-
-            })
+            // })
 
         </script>
 
