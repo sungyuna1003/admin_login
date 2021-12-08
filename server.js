@@ -115,7 +115,7 @@ app.get("/edit/:id", function (req, res) {
     }
   );
 });
-app.put("/edit", function (req, res) {
+app.put("/edit?", function (req, res) {
   db.collection("customer").updateOne(
     { _id: parseInt(req.body.id) },
     {
@@ -128,7 +128,7 @@ app.put("/edit", function (req, res) {
       },
     },
     function (error, result) {
-      console.log("edited");
+      console.log(result);
       res.redirect("/list");
     }
   );
