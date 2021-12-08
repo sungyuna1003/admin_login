@@ -131,7 +131,7 @@ app.put("/edit?", function (req, res) {
 });
 
 const passport = require("passport");
-const localStrategy = require("passport-local").Strategy;
+const LocalStrategy = require("passport-local").Strategy;
 const session = require("express-session");
 
 app.use(
@@ -140,7 +140,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get("/", function (req, res) {
+app.get("/login", function (req, res) {
   res.render("login.ejs");
 });
 app.post(
@@ -149,7 +149,7 @@ app.post(
     failureRedirect: "fail",
   }),
   function (req, res) {
-    req.redirect("/list");
+    req.redirect("/login");
   }
 );
 //START LocalStrategy 인증방식(copy+past)
@@ -181,3 +181,12 @@ passport.use(
   )
 );
 //END LocalStrategy 인증방식(copy+past)
+
+//id 이용하여 세선 저장(with login)
+passport.serializeUser(function (user, done) {
+  done(null, user.id);
+});
+//이 세션 데이터를 가진 사람을 DB에서찾기(with mypage)
+passport.deserializeUser(function (id, done) {
+  done(null, {});
+});
